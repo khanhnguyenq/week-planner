@@ -1,0 +1,29 @@
+.container {
+  width: 650px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.row-to-column {
+  flex-direction: column;
+  align-content: center;
+}
+
+.margin-15 {
+  margin: 15px;
+}
+
+.new-btn {
+  color: #fff;
+  background-color: #5c636a;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.border {
+  border: #5c636a;
+}
