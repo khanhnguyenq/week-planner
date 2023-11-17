@@ -56,10 +56,9 @@ footer {
 
 .row-column-modal {
   flex-direction: column;
-  align-content: left;
+  align-content: center;
   position: relative;
-  width: 80%;
-  height: 20%;
+  gap: 10px;
   background-color: white;
 }
 
@@ -79,6 +78,8 @@ footer {
 
 .space-around {
   justify-content: space-around;
+  position: relative;
+  background-color: white;
 }
 
 .overlay {
@@ -88,4 +89,14 @@ footer {
   bottom: 0;
   right: 0;
   left: 0;
+}
+
+.modal-container {
+  width: 30%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.width-90 {
+  width: 90%;
 }
