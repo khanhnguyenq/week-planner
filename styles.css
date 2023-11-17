@@ -57,6 +57,10 @@ footer {
 .row-column-modal {
   flex-direction: column;
   align-content: left;
+  position: relative;
+  width: 80%;
+  height: 20%;
+  background-color: white;
 }
 
 .cancel {
@@ -75,4 +79,13 @@ footer {
 
 .space-around {
   justify-content: space-around;
+}
+
+.overlay {
+  background: rgb(50, 50, 50, 0.7);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
