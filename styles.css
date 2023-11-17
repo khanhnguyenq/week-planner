@@ -53,6 +53,7 @@ th {
 footer {
   font-size: x-small;
   padding-left: 25px;
+  text-align: left;
 }
 
 .row-column-modal {
@@ -112,11 +113,17 @@ footer {
   background-color: blue;
   padding: 1px 5px;
   border-radius: 5px;
+  margin-left: 20%;
 }
 
 .delete {
   color: #fff;
-  background-color: red;
+  background-color: rgb(224, 9, 9);
   padding: 1px 5px;
   border-radius: 5px;
+  margin-left: 20%;
+}
+
+.flex {
+  display: flex;
 }
