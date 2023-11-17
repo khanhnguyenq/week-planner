@@ -21,8 +21,16 @@ let data = {
 const $confirmBtn = document.querySelector('.confirm');
 const $eventForm = document.querySelector('.event-form');
 
-$confirmBtn.addEventListener('submit', function (event) {
-  const submittedData = {};
+$confirmBtn.addEventListener('click', function (event) {
+  event.preventDefault();
+  const submittedData = {
+    time: $time.value,
+    day: $day.value,
+    information: $information.value;
+  };
+  console.log(submittedData);
 });
 
-console.log('event-form:', $eventForm);
+const $time = document.querySelector('#time');
+const $day = document.querySelector('#weekday-modal');
+const $information = document.querySelector('#information');
