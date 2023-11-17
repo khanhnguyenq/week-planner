@@ -28,6 +28,7 @@ $confirmBtn.addEventListener('click', function (event) {
     day: $day.value,
     information: $information.value,
   };
+  renderEntry();
   $overlay.classList.add('hidden');
   $eventForm.reset()
 });
@@ -35,10 +36,29 @@ $confirmBtn.addEventListener('click', function (event) {
 const $time = document.querySelector('#time');
 const $day = document.querySelector('#weekday-modal');
 const $information = document.querySelector('#information');
+const $tBody = document.querySelector('tbody');
 
 function renderEntry() {
   const $tr = document.createElement('tr');
   const $firstTd = document.createElement('td');
   const $secondTd = document.createElement('td');
   const $thirdTd = document.createElement('td');
+  const $editButton = document.createElement('button');
+  const $deleteButton = document.createElement('button');
+
+  $firstTd.textContent = $time.value;
+  $secondTd.textContent = $information.value;
+  $editButton.textContent = 'Edit';
+  $deleteButton.textContent = 'Delete';
+  $editButton.setAttribute('class', 'edit');
+  $deleteButton.setAttribute('class', 'delete');
+
+  $tBody.appendChild($tr);
+  $tr.appendChild($firstTd);
+  $tr.appendChild($secondTd);
+  $tr.appendChild($thirdTd);
+  $thirdTd.appendChild($editButton);
+  $thirdTd.appendChild($deleteButton);
+
+  return $tr;
 }
