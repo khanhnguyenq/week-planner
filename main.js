@@ -26,11 +26,19 @@ $confirmBtn.addEventListener('click', function (event) {
   const submittedData = {
     time: $time.value,
     day: $day.value,
-    information: $information.value;
+    information: $information.value,
   };
-  console.log(submittedData);
+  $overlay.classList.add('hidden');
+  $eventForm.reset()
 });
 
 const $time = document.querySelector('#time');
 const $day = document.querySelector('#weekday-modal');
 const $information = document.querySelector('#information');
+
+function renderEntry() {
+  const $tr = document.createElement('tr');
+  const $firstTd = document.createElement('td');
+  const $secondTd = document.createElement('td');
+  const $thirdTd = document.createElement('td');
+}
