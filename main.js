@@ -1,3 +1,5 @@
+/* global data */
+
 const $newBtn = document.querySelector('.new-btn');
 const $overlay = document.querySelector('.overlay');
 
@@ -11,17 +13,10 @@ $cancelBtn.addEventListener('click', function (event) {
   $overlay.classList.add('hidden');
 });
 
-let data = {
-  view: 'day',
-  entries: [],
-  editing: null,
-  nextEntryId: 1,
-};
-
 const $confirmBtn = document.querySelector('.confirm');
 const $eventForm = document.querySelector('.event-form');
 
-$confirmBtn.addEventListener('click', function (event) {
+$eventForm.addEventListener('submit', function (event) {
   event.preventDefault();
   const submittedData = {
     time: $time.value,
@@ -30,6 +25,7 @@ $confirmBtn.addEventListener('click', function (event) {
   };
   renderEntry();
   $overlay.classList.add('hidden');
+  $tHead.classList.remove('hidden');
   $eventForm.reset()
 });
 
@@ -37,6 +33,7 @@ const $time = document.querySelector('#time');
 const $day = document.querySelector('#weekday-modal');
 const $information = document.querySelector('#information');
 const $tBody = document.querySelector('tbody');
+const $tHead = document.querySelector('thead');
 
 function renderEntry() {
   const $tr = document.createElement('tr');
