@@ -11,19 +11,21 @@ const $cancelBtn = document.querySelector('.cancel');
 
 $cancelBtn.addEventListener('click', function (event) {
   $overlay.classList.add('hidden');
+
 });
 
 const $confirmBtn = document.querySelector('.confirm');
 const $eventForm = document.querySelector('.event-form');
 
-$eventForm.addEventListener('submit', function (event) {
+$confirmBtn.addEventListener('click', function (event) {
   event.preventDefault();
   const submittedData = {
     time: $time.value,
     day: $day.value,
     information: $information.value,
   };
-  renderEntry();
+  data.entries.unshift(submittedData);
+  $tBody.prepend(renderEntry(submittedData));
   $overlay.classList.add('hidden');
   $tHead.classList.remove('hidden');
   $eventForm.reset()
@@ -58,4 +60,8 @@ function renderEntry() {
   $thirdTd.appendChild($deleteButton);
 
   return $tr;
+}
+
+function viewSwap() {
+
 }
